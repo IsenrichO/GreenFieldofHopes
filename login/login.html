@@ -1,0 +1,15 @@
+<div class="login jumbotron center-block">
+  <h1>Login</h1>
+  <form role="form" (submit)="login($event, username.value, password.value)"> add 
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" #username class="form-control" id="username" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+  </div>
+    <input type="password" #password class="form-control" id="password" placeholder="Password">
+  <button type="submit" class="">Submit</button>
+    <a [routerLink]="['/signup']">Click here to Signup</a> <!-- add routing to signup page -->
+</form>
+</div>
