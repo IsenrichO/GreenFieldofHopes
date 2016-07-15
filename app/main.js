@@ -6,6 +6,7 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     bootstrap(app.ActivityLoginComponent, []);
+    bootstrap(app.ActivitySignupComponent, []);
     bootstrap(app.ActivityJoinedComponent, []); // Need to add dataservice when completed
   });
 

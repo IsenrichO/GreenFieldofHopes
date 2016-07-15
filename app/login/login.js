@@ -1,10 +1,15 @@
 (function(app) {
 
+
   app.ActivityLoginComponent = 
     ng.core.Component({
       selector: 'logging-in',
       template: `
-
+        <style>
+        .login {
+          width: 40%
+        }
+        </style>
         <div class="login jumbotron center-block">
           <h1>Login</h1>
           <form role="form" (submit)="login($event, username.value, password.value)"> add 
@@ -33,7 +38,6 @@
 
       signup(event) {
         event.preventDefault();
-        
       }
 
   
