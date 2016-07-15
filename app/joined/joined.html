@@ -1,0 +1,14 @@
+<h1>Activity: {{name}}</h1>
+  <h1>Joined Events!</h1>
+  <div>
+    <div id="activityList">
+      <div class="activity" *ngFor="let activity of activities">
+        <h3>{{activity.name}}</h3>
+        <p>Date: {{activity.when}}</p>
+        <p>Location: {{activity.where}}</p>
+        <p>Initiator: {{activity.initiator}}</p>
+        <p>Joining: {{activity.joining}}</p>
+        <p>Comments: {{activity.comments}}</p>
+      </div>
+    </div>
+  </div>
