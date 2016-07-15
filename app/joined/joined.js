@@ -27,6 +27,7 @@
       selector: 'joined',
       //templateUrl: 'app/joinedEvents.html'
       template: `
+      <div class="container jumbotron center-block">
          <h1>Joined Events!</h1>
          <div>
            <div id="activityList">
@@ -40,6 +41,7 @@
              </div>
            </div>
          </div>
+      </div>   
       `
     })
   ];
