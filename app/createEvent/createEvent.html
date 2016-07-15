@@ -1,0 +1,32 @@
+
+<div class="container">
+   <h1>Activity Form</h1>
+   <form (ngSubmit)="onSubmit(model)" #activityForm="ngForm">
+   <div class="form-group">
+     <label for="name">Type of Activity</label>
+     <input type="text" class="form-control" required
+       [(ngModel)]="model.name"
+        [ngModelOptions]="{standalone: true}">
+   </div>
+     <div class="form-group">
+       <label for="comment">Comments?</label>
+       <input type="text" class="form-control" required
+         [(ngModel)]="model.comments"
+           [ngModelOptions]="{standalone: true}" >
+     </div>
+     <div class="form-group">
+       <label for="name">When?</label>
+       <input type="text" class="form-control" required
+         [(ngModel)]="model.when"
+           [ngModelOptions]="{standalone: true}">
+     </div>
+     <div class="form-group">
+       <label for="name">Where?</label>
+       <input type="text" class="form-control" required
+         [(ngModel)]="model.where"
+           [ngModelOptions]="{standalone: true}">
+     </div>
+     <button type="submit" class="btn btn-default"
+             [disabled]="!activityForm.form.valid">Submit</button>
+   </form>
+ </div>

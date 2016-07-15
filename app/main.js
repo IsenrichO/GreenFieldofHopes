@@ -8,6 +8,7 @@
     bootstrap(app.ActivityLoginComponent, []);
     bootstrap(app.ActivitySignupComponent, []);
     bootstrap(app.ActivityJoinedComponent, []); // Need to add dataservice when completed
+    bootstrap(app.ActivityCreateComponent, []);
   });
 
 })(window.app = window.app || {});
