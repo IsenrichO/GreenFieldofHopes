@@ -7,6 +7,7 @@
   document.addEventListener('DOMContentLoaded', function() {
     bootstrap(app.ActivityLoginComponent, []);
     bootstrap(app.ActivitySignupComponent, []);
+    bootstrap(app.ActivityCreateComponent, []);
   });
 
 })(window.app = window.app || {});
