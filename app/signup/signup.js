@@ -33,7 +33,8 @@
 
       signup(event, username, password) {
         event.preventDefault();
-        console.log('signing up bitch')
+        let body = JSON.stringify({ username, password });
+        console.log('signing up bitch' + body)
       },
 
       login(event) {
