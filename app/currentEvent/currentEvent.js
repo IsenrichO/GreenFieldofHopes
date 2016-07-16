@@ -1,6 +1,6 @@
 (function(app) {
   // Create function to attach everything to and pass any injected service.
-  function ActivityComponent(dataService) {
+  function ActivityComponent(dataService) { 
     // Dummy Data for now
     this.activities = [ {name: 'Off the Grid', when: '09/07/2016', 
                          where: 'Fort Mason', initiator: 'Nick', 
@@ -9,11 +9,14 @@
                          where: 'Lions Field', initiator: 'Josh', 
                          joining: 'Nick, Rene', comments: 'Play ball'},
                       ];
+    this.join = function(){
+      console.log('fuck you');
+    };
+    this.decline = function() {
+      console.log('fuck you 2 times');
+    };
+    
 
-    // Commented out for now
-    // dataService.getJoinedActivities.call(this, function(data) {
-    //   this.activities = data;
-    // });
   }
   // Declare components injectables
   ActivityComponent.parameters = [
@@ -24,11 +27,11 @@
     // create new component
     new ng.core.Component({
       // create selector for html
-      selector: 'joined',
+      selector: 'current-event-display',
       //templateUrl: 'app/joinedEvents.html'
       template: `
       <div class="container jumbotron center-block">
-         <h1>Joined Events!</h1>
+         <h1>Want to Join?!</h1>
          <div>
            <div id="activityList">
              <div class="activity" *ngFor="let activity of activities">
@@ -41,12 +44,15 @@
              </div>
            </div>
          </div>
-      </div>   
+      <button type="submit" class="decline" (click)="decline()">Decline</button>
+      <button type="submit" class="join" (click)="join()">Join</button>
+      </div>
+
       `
     })
   ];
 
   // Name and link component
-  app.ActivityJoinedComponent = ActivityComponent;
+  app.CurrentEvent = ActivityComponent;
 
 })(window.app = window.app || {});
