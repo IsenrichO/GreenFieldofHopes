@@ -9,6 +9,7 @@
     bootstrap(app.ActivitySignupComponent, []);
     bootstrap(app.ActivityJoinedComponent, []); // Need to add dataservice when completed
     bootstrap(app.ActivityCreateComponent, []);
+    bootstrap(app.CurrentEvent, []); // current event that is being displayed
   });
 
 })(window.app = window.app || {});
